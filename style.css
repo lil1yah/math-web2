@@ -15,125 +15,47 @@ body{
 
 /*------------- Navigation style start ------------*/
 
-
 .navbar{
-    background:skyblue;
+    background:linear-gradient(90deg,#6ec6ff,#87CEEB);
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:15px 8%;
     flex-wrap:wrap;
+    position:sticky;
+    top:0;
+    z-index:1000;
 }
 
 .logo{
+    color:white;
     font-size:30px;
     font-weight:bold;
-    color:white;
 }
 
 .nav-links{
+    display:flex;
+    gap:18px;
     list-style:none;
-    display:flex;
-    gap:20px;
     flex-wrap:wrap;
 }
 
-.nav-links li a{
+.nav-links a{
+    color:white;
     text-decoration:none;
-    color:white;
     font-weight:bold;
+    padding:8px 12px;
+    border-radius:8px;
     transition:.3s;
 }
 
-.nav-links li a:hover,
-.active{
-    color:#003366;
-}
-
-/*------------- Banner ------------*/
-
-.banner{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    padding:60px 8%;
+.nav-links a:hover,
+.nav-links a.active{
     background:white;
-}
-
-.banner-text{
-    flex:1;
-    min-width:280px;
-}
-
-.banner-text h1{
     color:#1d8fe1;
-    font-size:45px;
-    margin-bottom:20px;
 }
 
-.banner-text p{
-    margin-bottom:25px;
-}
-
-.banner-image{
-    flex:1;
-    text-align:center;
-}
-
-.banner-image img{
-    width:100%;
-    max-width:420px;
-}
-
-/*------------- Button ------------*/
-
-/* Scientific Calculator */
-
-.calculator{
-    width:360px;
-    max-width:95%;
-    margin:40px auto;
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-}
-
-.calculator input{
-    width:100%;
-    height:60px;
-    font-size:24px;
-    text-align:right;
-    padding:10px;
-    margin-bottom:15px;
-    border:2px solid skyblue;
-    border-radius:10px;
-}
-
-.buttons{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:10px;
-}
-
-.buttons button{
-    height:60px;
-    font-size:20px;
-    border:none;
-    border-radius:10px;
-    background:skyblue;
-    color:white;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.buttons button:hover{
-    background:#1d8fe1;
-}
-
-/*------------- Page Title------------*/
-
+/*------------- Page Title ------------*/
 
 .page-title{
     text-align:center;
@@ -145,40 +67,52 @@ body{
     margin-bottom:10px;
 }
 
-/*------------- Intro ------------*/
+/*------------- Banner ------------*/
 
-.intro{
-    text-align:center;
-    padding:40px 8%;
+.banner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:50px 8%;
+    background:white;
+    flex-wrap:wrap;
 }
 
-/*------------- Features & Cards ------------*/
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-    padding:40px 8%;
+.banner img{
+    max-width:400px;
+    width:100%;
 }
+
+/*------------- Calculator Grid ------------*/
 
 .calculator-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:25px;
-    padding:30px 8%;
+    padding:40px 8%;
 }
+
+/*------------- Card ------------*/
 
 .card{
     background:white;
-    border-radius:12px;
+    border-radius:15px;
     padding:25px;
-    box-shadow:0 4px 10px rgba(0,0,0,.1);
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+    transition:.35s;
+    position:relative;
 }
 
-.card h2,
-.card h3{
+.card:hover,
+.card:focus-within{
+    transform:translateY(-10px) scale(1.03);
+    box-shadow:0 15px 30px rgba(0,0,0,.2);
+    z-index:10;
+}
+
+.card h2{
     color:#1d8fe1;
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
 .card p{
@@ -187,52 +121,111 @@ body{
 
 .card input{
     width:100%;
-    padding:10px;
-    margin-top:10px;
-    margin-bottom:10px;
-    border:1px solid #ccc;
-    border-radius:6px;
+    padding:12px;
+    margin:10px 0;
+    border:2px solid #bde7ff;
+    border-radius:8px;
+    outline:none;
+    transition:.3s;
 }
 
-/*------------- About------------*/
+.card input:focus{
+    border-color:#1d8fe1;
+    box-shadow:0 0 10px rgba(29,143,225,.25);
+}
+
+/*------------- Buttons ------------*/
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:none;
+    border-radius:8px;
+    background:linear-gradient(90deg,#6ec6ff,#1d8fe1);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 8px 15px rgba(0,0,0,.2);
+}
+
+/*------------- Scienctific Calculator ------------*/
+
+.calculator{
+    max-width:420px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.calculator input{
+    width:100%;
+    height:65px;
+    text-align:right;
+    font-size:28px;
+    border:2px solid skyblue;
+    border-radius:10px;
+    padding:10px;
+    margin-bottom:20px;
+}
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+}
+
+.buttons button{
+    height:60px;
+    font-size:20px;
+}
+
+/*------------- About ------------*/
 
 .about-container{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-    padding:30px 8%;
+    gap:25px;
+    padding:40px 8%;
 }
 
-.about-list{
-    padding-left:20px;
-}
-
-.about-list li{
-    margin-bottom:10px;
+.about-container img{
+    width:180px;
+    border-radius:50%;
+    border:5px solid skyblue;
+    margin-bottom:15px;
 }
 
 /*------------- Footer ------------*/
 
 footer{
-    background:skyblue;
+    background:#6ec6ff;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:18px;
     margin-top:40px;
 }
 
-/*------------- Responsive ------------*/
+/*------------- Mobile ------------*/
 
 @media(max-width:768px){
 
 .navbar{
     flex-direction:column;
-    text-align:center;
 }
 
 .nav-links{
     flex-direction:column;
-    gap:12px;
+    width:100%;
+    text-align:center;
     margin-top:15px;
 }
 
@@ -241,17 +234,11 @@ footer{
     text-align:center;
 }
 
-.banner-text h1{
-    font-size:35px;
-}
-
-.banner-image{
-    margin-top:25px;
-}
-
-.features,
-.calculator-grid,
-.about-container{
+.calculator-grid{
     grid-template-columns:1fr;
+}
+
+.buttons button{
+    height:55px;
 }
 }
