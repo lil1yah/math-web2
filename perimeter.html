@@ -1,1 +1,97 @@
-perimeter
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perimeter | AliMathics</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+
+    <nav class="navbar">
+        <div class="logo">
+           AliMathics
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="diameter.html">Diameter</a></li>
+            <li><a href="area.html">Area</a></li>
+            <li><a href="volume.html">Volume</a></li>
+            <li><a href="perimeter.html" class="active">Perimeter</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h1>Perimeter Calculators</h1>
+    <p>
+        Calculate the perimeter or circumference of different shapes.
+    </p>
+</section>
+
+<div class="calculator-grid">
+    <!-- Rectangle -->
+    <div class="card">
+        <h2>Rectangle</h2>
+        <p><strong>Formula:</strong> P = 2(L + W)</p>
+        <input type="number" id="rectPerimeterLength" placeholder="Enter Length">
+        <input type="number" id="rectPerimeterWidth" placeholder="Enter Width">
+        <button onclick="rectanglePerimeter()">Solve</button>
+        <h3 id="rectanglePerimeterResult">Answer:</h3>
+    </div>
+
+    <!-- Square -->
+    <div class="card">
+        <h2>Square</h2>
+        <p><strong>Formula:</strong> P = 4 × Side</p>
+        <input type="number" id="squarePerimeterSide" placeholder="Enter Side Length">
+        <button onclick="squarePerimeter()">Solve</button>
+        <h3 id="squarePerimeterResult">Answer:</h3>
+    </div>
+
+    <!-- Triangle -->
+    <div class="card">
+        <h2>Triangle</h2>
+        <p><strong>Formula:</strong> P = Side₁ + Side₂ + Side₃</p>
+        <input type="number" id="triangleSide1" placeholder="Enter Side 1">
+        <input type="number" id="triangleSide2" placeholder="Enter Side 2">
+        <input type="number" id="triangleSide3" placeholder="Enter Side 3">
+        <button onclick="trianglePerimeter()">Solve</button>
+        <h3 id="trianglePerimeterResult">Answer:</h3>
+    </div>
+
+
+    <!-- Circle -->
+    <div class="card">
+        <h2>Circle (Circumference)</h2>
+        <p><strong>Formula:</strong> C = 2 × π × r</p>
+        <input type="number" id="circlePerimeterRadius" placeholder="Enter Radius">
+        <button onclick="circlePerimeter()">Solve</button>
+        <h3 id="circlePerimeterResult">Answer:</h3>
+    </div>
+
+    <!-- Parallelogram -->
+    <div class="card">
+        <h2>Parallelogram</h2>
+        <p><strong>Formula:</strong> P = 2(Base + Side)</p>
+        <input type="number" id="paraBasePerimeter" placeholder="Enter Base">
+        <input type="number" id="paraSidePerimeter" placeholder="Enter Side">
+        <button onclick="parallelogramPerimeter()">Solve</button>
+        <h3 id="parallelogramPerimeterResult">Answer:</h3>
+    </div>
+</div>
+
+<footer>
+    <p>
+        AliMathics | Mathematics Calculator Website
+    </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
