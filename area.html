@@ -1,1 +1,102 @@
-area
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area | AliMathics</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+
+    <nav class="navbar">
+        <div class="logo">
+            AliMathics
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="diameter.html">Diameter</a></li>
+            <li><a href="area.html" class="active">Area</a></li>
+            <li><a href="volume.html">Volume</a></li>
+            <li><a href="perimeter.html">Perimeter</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-title">
+    <h1>Area Calculators</h1>
+    <p>Calculate the area of different geometric figures.</p>
+</section>
+
+<div class="calculator-grid">
+
+    <!-- Rectangle -->
+    <div class="card">
+        <h2>Rectangle</h2>
+        <p><strong>Formula:</strong> Area = Length × Width</p>
+        <input type="number" id="rectLength" placeholder="Enter Length">
+        <input type="number" id="rectWidth" placeholder="Enter Width">
+        <button onclick="rectangleArea()">Solve</button>
+        <h3 id="rectangleAreaResult">Answer:</h3>
+    </div>
+
+    <!-- Square -->
+    <div class="card">
+        <h2>Square</h2>
+        <p><strong>Formula:</strong> Area = Side²</p>
+        <input type="number" id="squareSide" placeholder="Enter Side Length">
+        <button onclick="squareArea()">Solve</button>
+        <h3 id="squareAreaResult">Answer:</h3>
+    </div>
+
+    <!-- Triangle -->
+    <div class="card">
+        <h2>Triangle</h2>
+        <p><strong>Formula:</strong> Area = ½ × Base × Height</p>
+        <input type="number" id="triangleBase" placeholder="Enter Base">
+        <input type="number" id="triangleHeight" placeholder="Enter Height">
+        <button onclick="triangleArea()">Solve</button>
+        <h3 id="triangleAreaResult">Answer:</h3>
+    </div>
+
+    <!-- Circle -->
+    <div class="card">
+        <h2>Circle</h2>
+        <p><strong>Formula:</strong> Area = π × r²</p>
+        <input type="number" id="circleAreaRadius" placeholder="Enter Radius">
+        <button onclick="circleAreaCalculator()">Solve</button>
+        <h3 id="circleAreaOutput">Answer:</h3>
+    </div>
+
+    <!-- Parallelogram -->
+    <div class="card">
+        <h2>Parallelogram</h2>
+        <p><strong>Formula:</strong> Area = Base × Height</p>
+        <input type="number" id="paraBase" placeholder="Enter Base">
+        <input type="number" id="paraHeight" placeholder="Enter Height">
+        <button onclick="parallelogramArea()">Solve</button>
+        <h3 id="parallelogramAreaResult">Answer:</h3>
+    </div>
+
+    <!-- Trapezoid -->
+    <div class="card">
+        <h2>Trapezoid</h2>
+        <p><strong>Formula:</strong> Area = ((Base₁ + Base₂) × Height) ÷ 2</p>
+        <input type="number" id="trapBase1" placeholder="Enter Base 1">
+        <input type="number" id="trapBase2" placeholder="Enter Base 2">
+        <input type="number" id="trapHeight" placeholder="Enter Height">
+        <button onclick="trapezoidArea()">Solve</button>
+        <h3 id="trapezoidAreaResult">Answer:</h3>
+    </div>
+</div>
+
+<footer>
+    <p>AliMathics | Mathematics Calculator Website</p>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
