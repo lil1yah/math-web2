@@ -1,134 +1,107 @@
-// ===============================
-// BASIC CALCULATOR
-// ===============================
+// =========================
+// SCIENTIFIC CALCULATOR
+// =========================
 
-function addition() {
-    let a = Number(document.getElementById("add1").value);
-    let b = Number(document.getElementById("add2").value);
-    document.getElementById("addResult").innerHTML = "Answer: " + (a + b);
+const display = document.getElementById("display");
+
+function append(value) {
+    document.getElementById("display").value += value;
 }
 
-function subtraction() {
-    let a = Number(document.getElementById("sub1").value);
-    let b = Number(document.getElementById("sub2").value);
-    document.getElementById("subResult").innerHTML = "Answer: " + (a - b);
+function clearDisplay() {
+    document.getElementById("display").value = "";
 }
 
-function multiplication() {
-    let a = Number(document.getElementById("mul1").value);
-    let b = Number(document.getElementById("mul2").value);
-    document.getElementById("mulResult").innerHTML = "Answer: " + (a * b);
+function deleteLast() {
+    let display = document.getElementById("display");
+    display.value = display.value.slice(0, -1);
 }
 
-function division() {
-    let a = Number(document.getElementById("div1").value);
-    let b = Number(document.getElementById("div2").value);
+function calculate() {
+    let display = document.getElementById("display");
 
-    if (b == 0) {
-        document.getElementById("divResult").innerHTML = "Answer: Cannot divide by zero";
-    } else {
-        document.getElementById("divResult").innerHTML = "Answer: " + (a / b);
+    try {
+        display.value = eval(display.value);
+    } catch {
+        display.value = "Error";
     }
-}
-
-function percentage() {
-    let number = Number(document.getElementById("percent1").value);
-    let percent = Number(document.getElementById("percent2").value);
-
-    document.getElementById("percentResult").innerHTML =
-        "Answer: " + ((number * percent) / 100);
 }
 
 function squareRoot() {
-    let num = Number(document.getElementById("sqrtInput").value);
-
-    document.getElementById("sqrtResult").innerHTML =
-        "Answer: " + Math.sqrt(num);
-}
-
-function exponent() {
-    let base = Number(document.getElementById("base").value);
-    let power = Number(document.getElementById("power").value);
-
-    document.getElementById("expResult").innerHTML =
-        "Answer: " + Math.pow(base, power);
-}
-
-function expressionCalc() {
-    let expression = document.getElementById("expression").value;
+    let display = document.getElementById("display");
 
     try {
-        document.getElementById("expressionResult").innerHTML =
-            "Answer: " + eval(expression);
+        display.value = Math.sqrt(eval(display.value));
     } catch {
-        document.getElementById("expressionResult").innerHTML =
-            "Invalid Expression";
+        display.value = "Error";
     }
 }
 
-// ===============================
+
+// =========================
 // DIAMETER
-// ===============================
+// =========================
 
 function diameterFromRadius() {
     let r = Number(document.getElementById("radiusDiameter").value);
 
     document.getElementById("diameterResult").innerHTML =
-        "Answer: " + (2 * r);
+    "Answer: " + (2 * r);
 }
 
 function radiusFromDiameter() {
     let d = Number(document.getElementById("diameterRadius").value);
 
     document.getElementById("radiusResult").innerHTML =
-        "Answer: " + (d / 2);
+    "Answer: " + (d / 2);
 }
 
 function circumference() {
     let d = Number(document.getElementById("circDiameter").value);
 
     document.getElementById("circResult").innerHTML =
-        "Answer: " + (Math.PI * d).toFixed(2);
+    "Answer: " + (Math.PI * d).toFixed(2);
 }
 
 function circleArea() {
     let r = Number(document.getElementById("circleRadius").value);
 
     document.getElementById("circleAreaResult").innerHTML =
-        "Answer: " + (Math.PI * r * r).toFixed(2);
+    "Answer: " + (Math.PI * r * r).toFixed(2);
 }
 
 function diameterFromCircumference() {
     let c = Number(document.getElementById("circInput").value);
 
     document.getElementById("diameterCircResult").innerHTML =
-        "Answer: " + (c / Math.PI).toFixed(2);
+    "Answer: " + (c / Math.PI).toFixed(2);
 }
 
 function radiusFromCircumference() {
     let c = Number(document.getElementById("circRadiusInput").value);
 
     document.getElementById("radiusCircResult").innerHTML =
-        "Answer: " + (c / (2 * Math.PI)).toFixed(2);
+    "Answer: " + (c / (2 * Math.PI)).toFixed(2);
 }
 
-// ===============================
+
+// =========================
 // AREA
-// ===============================
+// =========================
 
 function rectangleArea() {
     let l = Number(document.getElementById("rectLength").value);
     let w = Number(document.getElementById("rectWidth").value);
 
     document.getElementById("rectangleAreaResult").innerHTML =
-        "Answer: " + (l * w);
+    "Answer: " + (l * w);
 }
 
 function squareArea() {
     let s = Number(document.getElementById("squareSide").value);
 
     document.getElementById("squareAreaResult").innerHTML =
-        "Answer: " + (s * s);
+    "Answer: " + (s * s);
 }
 
 function triangleArea() {
@@ -136,14 +109,14 @@ function triangleArea() {
     let h = Number(document.getElementById("triangleHeight").value);
 
     document.getElementById("triangleAreaResult").innerHTML =
-        "Answer: " + ((b * h) / 2);
+    "Answer: " + ((b * h) / 2);
 }
 
 function circleAreaCalculator() {
     let r = Number(document.getElementById("circleAreaRadius").value);
 
     document.getElementById("circleAreaOutput").innerHTML =
-        "Answer: " + (Math.PI * r * r).toFixed(2);
+    "Answer: " + (Math.PI * r * r).toFixed(2);
 }
 
 function parallelogramArea() {
@@ -151,7 +124,7 @@ function parallelogramArea() {
     let h = Number(document.getElementById("paraHeight").value);
 
     document.getElementById("parallelogramAreaResult").innerHTML =
-        "Answer: " + (b * h);
+    "Answer: " + (b * h);
 }
 
 function trapezoidArea() {
@@ -160,18 +133,19 @@ function trapezoidArea() {
     let h = Number(document.getElementById("trapHeight").value);
 
     document.getElementById("trapezoidAreaResult").innerHTML =
-        "Answer: " + (((b1 + b2) * h) / 2);
+    "Answer: " + (((b1 + b2) * h) / 2);
 }
 
-// ===============================
+
+// =========================
 // VOLUME
-// ===============================
+// =========================
 
 function cubeVolume() {
     let s = Number(document.getElementById("cubeSide").value);
 
     document.getElementById("cubeVolumeResult").innerHTML =
-        "Answer: " + Math.pow(s, 3);
+    "Answer: " + Math.pow(s, 3);
 }
 
 function cylinderVolume() {
@@ -179,7 +153,7 @@ function cylinderVolume() {
     let h = Number(document.getElementById("cylinderHeight").value);
 
     document.getElementById("cylinderVolumeResult").innerHTML =
-        "Answer: " + (Math.PI * r * r * h).toFixed(2);
+    "Answer: " + (Math.PI * r * r * h).toFixed(2);
 }
 
 function coneVolume() {
@@ -187,14 +161,14 @@ function coneVolume() {
     let h = Number(document.getElementById("coneHeight").value);
 
     document.getElementById("coneVolumeResult").innerHTML =
-        "Answer: " + ((Math.PI * r * r * h) / 3).toFixed(2);
+    "Answer: " + ((Math.PI * r * r * h) / 3).toFixed(2);
 }
 
 function sphereVolume() {
     let r = Number(document.getElementById("sphereRadius").value);
 
     document.getElementById("sphereVolumeResult").innerHTML =
-        "Answer: " + ((4 / 3) * Math.PI * Math.pow(r, 3)).toFixed(2);
+    "Answer: " + ((4 / 3) * Math.PI * Math.pow(r, 3)).toFixed(2);
 }
 
 function rectangularPrismVolume() {
@@ -203,26 +177,27 @@ function rectangularPrismVolume() {
     let h = Number(document.getElementById("prismHeight").value);
 
     document.getElementById("prismVolumeResult").innerHTML =
-        "Answer: " + (l * w * h);
+    "Answer: " + (l * w * h);
 }
 
-// ===============================
+
+// =========================
 // PERIMETER
-// ===============================
+// =========================
 
 function rectanglePerimeter() {
     let l = Number(document.getElementById("rectPerimeterLength").value);
     let w = Number(document.getElementById("rectPerimeterWidth").value);
 
     document.getElementById("rectanglePerimeterResult").innerHTML =
-        "Answer: " + (2 * (l + w));
+    "Answer: " + (2 * (l + w));
 }
 
 function squarePerimeter() {
     let s = Number(document.getElementById("squarePerimeterSide").value);
 
     document.getElementById("squarePerimeterResult").innerHTML =
-        "Answer: " + (4 * s);
+    "Answer: " + (4 * s);
 }
 
 function trianglePerimeter() {
@@ -231,14 +206,14 @@ function trianglePerimeter() {
     let c = Number(document.getElementById("triangleSide3").value);
 
     document.getElementById("trianglePerimeterResult").innerHTML =
-        "Answer: " + (a + b + c);
+    "Answer: " + (a + b + c);
 }
 
 function circlePerimeter() {
     let r = Number(document.getElementById("circlePerimeterRadius").value);
 
     document.getElementById("circlePerimeterResult").innerHTML =
-        "Answer: " + (2 * Math.PI * r).toFixed(2);
+    "Answer: " + (2 * Math.PI * r).toFixed(2);
 }
 
 function parallelogramPerimeter() {
@@ -246,5 +221,5 @@ function parallelogramPerimeter() {
     let s = Number(document.getElementById("paraSidePerimeter").value);
 
     document.getElementById("parallelogramPerimeterResult").innerHTML =
-        "Answer: " + (2 * (b + s));
+    "Answer: " + (2 * (b + s));
 }
