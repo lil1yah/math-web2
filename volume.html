@@ -1,1 +1,93 @@
-volume
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume | AliMathics</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+          AliMathics
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="diameter.html">Diameter</a></li>
+            <li><a href="area.html">Area</a></li>
+            <li><a href="volume.html" class="active">Volume</a></li>
+            <li><a href="perimeter.html">Perimeter</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+</header>
+<section class="page-title">
+    <h1>Volume Calculators</h1>
+    <p>Calculate the volume of common three-dimensional figures.</p>
+</section>
+
+<div class="calculator-grid">
+    <!-- Cube -->
+    <div class="card">
+        <h2>Cube</h2>
+        <p><strong>Formula:</strong> Volume = Side³</p>
+        <input type="number" id="cubeSide" placeholder="Enter Side Length">
+        <button onclick="cubeVolume()">Solve</button>
+        <h3 id="cubeVolumeResult">Answer:</h3>
+    </div>
+
+    <!-- Cylinder -->
+    <div class="card">
+        <h2>Cylinder</h2>
+        <p><strong>Formula:</strong> Volume = π × r² × h</p>
+        <input type="number" id="cylinderRadius" placeholder="Enter Radius">
+        <input type="number" id="cylinderHeight" placeholder="Enter Height">
+        <button onclick="cylinderVolume()">Solve</button>
+        <h3 id="cylinderVolumeResult">Answer:</h3>
+    </div>
+
+    <!-- Cone -->
+    <div class="card">
+        <h2>Cone</h2>
+        <p><strong>Formula:</strong> Volume = (1/3) × π × r² × h</p>
+        <input type="number" id="coneRadius" placeholder="Enter Radius">
+        <input type="number" id="coneHeight" placeholder="Enter Height">
+        <button onclick="coneVolume()">Solve</button>
+        <h3 id="coneVolumeResult">Answer:</h3>
+    </div>
+
+    <!-- Sphere -->
+    <div class="card">
+        <h2>Sphere</h2>
+        <p><strong>Formula:</strong> Volume = (4/3) × π × r³</p>
+        <input type="number" id="sphereRadius" placeholder="Enter Radius">
+        <button onclick="sphereVolume()">Solve</button>
+        <h3 id="sphereVolumeResult">Answer:</h3>
+    </div>
+
+    <!-- Rectangular Prism -->
+    <div class="card">
+        <h2>Rectangular Prism</h2>
+        <p><strong>Formula:</strong> Volume = Length × Width × Height</p>
+        <input type="number" id="prismLength" placeholder="Enter Length">
+        <input type="number" id="prismWidth" placeholder="Enter Width">
+        <input type="number" id="prismHeight" placeholder="Enter Height">
+        <button onclick="rectangularPrismVolume()">Solve</button>
+        <h3 id="prismVolumeResult">Answer:</h3>
+    </div>
+</div>
+
+<footer>
+    <p>AliMathics | Mathematics Calculator Website</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
