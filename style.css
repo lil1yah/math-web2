@@ -204,6 +204,92 @@ button:hover{
     margin-bottom:15px;
 }
 
+.tabs{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin:30px 0;
+}
+
+.tab-btn{
+    padding:12px 20px;
+    border:none;
+    border-radius:30px;
+    background:#d9f3ff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.tab-btn.active{
+    background:skyblue;
+    color:white;
+    transform:translateY(-8px) scale(1.08);
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.tab-content{
+    display:none;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+    animation:slide .4s;
+}
+
+.tab-content.active{
+    display:block;
+}
+/*------------- Tab ------------*/
+
+.tabs{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin:30px 0;
+}
+
+.tab-btn{
+    padding:12px 20px;
+    border:none;
+    border-radius:30px;
+    background:#d9f3ff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.tab-btn.active{
+    background:skyblue;
+    color:white;
+    transform:translateY(-8px) scale(1.08);
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.tab-content{
+    display:none;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+    animation:slide .4s;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+@keyframes slide{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
 /*------------- Footer ------------*/
 
 footer{
