@@ -1,1 +1,235 @@
-style
+/*------------- General ------------*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#eef8ff;
+    color:#333;
+    line-height:1.6;
+}
+
+/*------------- Navigation style start ------------*/
+
+
+.navbar{
+    background:skyblue;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    flex-wrap:wrap;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:white;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.nav-links li a{
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.nav-links li a:hover,
+.active{
+    color:#003366;
+}
+
+/*------------- Banner ------------*/
+
+.banner{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:60px 8%;
+    background:white;
+}
+
+.banner-text{
+    flex:1;
+    min-width:280px;
+}
+
+.banner-text h1{
+    color:#1d8fe1;
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.banner-text p{
+    margin-bottom:25px;
+}
+
+.banner-image{
+    flex:1;
+    text-align:center;
+}
+
+.banner-image img{
+    width:100%;
+    max-width:420px;
+}
+
+/*------------- Button ------------*/
+
+.btn,
+button{
+    background:skyblue;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+button{
+    margin-top:12px;
+}
+
+.btn:hover,
+button:hover{
+    background:#1d8fe1;
+}
+
+/*------------- Page Title------------*/
+
+
+.page-title{
+    text-align:center;
+    padding:40px 20px;
+}
+
+.page-title h1{
+    color:#1d8fe1;
+    margin-bottom:10px;
+}
+
+/*------------- Intro ------------*/
+
+.intro{
+    text-align:center;
+    padding:40px 8%;
+}
+
+/*------------- Features & Cards ------------*/
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:40px 8%;
+}
+
+.calculator-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+    padding:30px 8%;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+}
+
+.card h2,
+.card h3{
+    color:#1d8fe1;
+    margin-bottom:10px;
+}
+
+.card p{
+    margin-bottom:15px;
+}
+
+.card input{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    margin-bottom:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+/*------------- About------------*/
+
+.about-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    padding:30px 8%;
+}
+
+.about-list{
+    padding-left:20px;
+}
+
+.about-list li{
+    margin-bottom:10px;
+}
+
+/*------------- Footer ------------*/
+
+footer{
+    background:skyblue;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+/*------------- Responsive ------------*/
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    text-align:center;
+}
+
+.nav-links{
+    flex-direction:column;
+    gap:12px;
+    margin-top:15px;
+}
+
+.banner{
+    flex-direction:column;
+    text-align:center;
+}
+
+.banner-text h1{
+    font-size:35px;
+}
+
+.banner-image{
+    margin-top:25px;
+}
+
+.features,
+.calculator-grid,
+.about-container{
+    grid-template-columns:1fr;
+}
+}
