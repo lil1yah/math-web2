@@ -223,3 +223,15 @@ function parallelogramPerimeter() {
     document.getElementById("parallelogramPerimeterResult").innerHTML =
     "Answer: " + (2 * (b + s));
 }
+
+function showTab(tabId, button){
+
+    const tabs = document.querySelectorAll(".tab-content");
+    tabs.forEach(tab => tab.classList.remove("active"));
+
+    const buttons = document.querySelectorAll(".tab-btn");
+    buttons.forEach(btn => btn.classList.remove("active"));
+
+    document.getElementById(tabId).classList.add("active");
+    button.classList.add("active");
+}
