@@ -31,14 +31,13 @@ body{
     display:flex;
     align-items:center;
     gap:10px;
-    font-size:30px;
-    font-weight:bold;
-    color:#87CEEB;
 }
 
 .logo img{
-    height:40px;
-    width:auto;
+    height:28px !important;
+    width:28px !important;
+    object-fit:contain;
+    display:block;
 }
 
 .nav-links{
