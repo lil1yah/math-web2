@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
 
+<header>
     <nav class="navbar">
         <div class="logo">
             AliMathics
         </div>
+
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="calculator.html">Calculator</a></li>
@@ -24,47 +25,49 @@
             <li><a href="about.html">About</a></li>
         </ul>
     </nav>
-  
+
 </header>
-  
 <section class="page-title">
-    <h1>Diameter Calculators</h1>
-    <p>A Calculator that helps you find the diameter, adius, circumsference.</p>
+    <h1>Diameter Calculator</h1>
+    <p>
+        Calculate the diameter, radius, and circumference of a circle using simple formulas.
+    </p>
 </section>
 
 <div class="calculator-grid">
-    <!-- Diameter from Radius -->
+
+    <!-- Diameter -->
     <div class="card">
-        <h2>Diameter from Radius</h2>
-        <p><strong>Formula:</strong> Diameter = 2 × Radius</p>
+        <h2>Diameter</h2>
+        <p><strong>Formula:</strong> d = 2r</p>
         <input type="number" id="radiusDiameter" placeholder="Enter Radius">
         <button onclick="diameterFromRadius()">Solve</button>
-        <h3 id="diameterResult">Answer:</h3>
+        <h3 id="diameterResult">Output:</h3>
     </div>
 
-    <!-- Radius from Diameter -->
+    <!-- Radius -->
     <div class="card">
-        <h2>Radius from Diameter</h2>
-        <p><strong>Formula:</strong> Radius = Diameter ÷ 2</p>
+        <h2>Radius</h2>
+        <p><strong>Formula:</strong> r = d ÷ 2</p>
         <input type="number" id="diameterRadius" placeholder="Enter Diameter">
         <button onclick="radiusFromDiameter()">Solve</button>
-        <h3 id="radiusResult">Answer:</h3>
+        <h3 id="radiusResult">Output:</h3>
     </div>
 
     <!-- Circumference -->
     <div class="card">
         <h2>Circumference</h2>
-        <p><strong>Formula:</strong> C = π × Diameter</p>
+        <p><strong>Formula:</strong> C = πd</p>
         <input type="number" id="circDiameter" placeholder="Enter Diameter">
         <button onclick="circumference()">Solve</button>
-        <h3 id="circResult">Answer:</h3>
+        <h3 id="circResult">Output:</h3>
     </div>
+</div>
 
 <footer>
-    <p>AliMathics | Math Hub</p>
+    <p> AliMathics | Math Hub</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
