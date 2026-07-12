@@ -101,7 +101,7 @@ body{
 }
 .banner-text p {
      text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 15px;
     margin-top: 40px;
 }
@@ -116,7 +116,7 @@ body{
 
 .intro p {
     text-align: center;
-    font-size: 25px;
+    font-size: 30px;
     margin-bottom: 15px;
     margin-top: 40px;
 }
@@ -270,11 +270,8 @@ button:hover{
 }
 
 .buttons button:hover{
-
     background:white;
-
     transform:translateY(-4px);
-
 }
 
 .buttons button:hover{
@@ -350,7 +347,7 @@ button:hover{
 /*------------- Footer ------------*/
 
 footer{
-     background:#0B2D63;
+    background:#0B2D63;
     color:white;
     text-align:center;
     padding:18px;
