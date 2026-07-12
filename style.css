@@ -79,6 +79,8 @@ body{
 .page-title h1{
     color:#1d8fe1;
     margin-bottom:10px;
+    font-size:40px;
+    font-family:Georgia, serif;
 }
 
 /*------------- Banner ------------*/
