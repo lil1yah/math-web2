@@ -16,28 +16,26 @@ body{
 /*------------- Navigation style start ------------*/
 
 .navbar{
-    background:#0B2D63;
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:15px 8%;
-    flex-wrap:wrap;
+    background:#0B2D63;
     position:sticky;
     top:0;
     z-index:1000;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
+.logo img{
+    width:40px;
+    height:40px;
+    object-fit:contain;
 }
 
-.logo img{
-    height:28px !important;
-    width:28px !important;
-    object-fit:contain;
-    display:block;
+.logo span{
+    font-size:24px;
+    font-weight:bold;
+    color:#87CEEB;
 }
 
 .nav-links{
@@ -47,13 +45,11 @@ body{
     flex-wrap:wrap;
 }
 
-.nav-links a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-    padding:8px 12px;
-    border-radius:8px;
-    transition:.3s;
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+    margin-left:auto;
 }
 
 .nav-links a:hover,
