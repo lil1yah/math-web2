@@ -26,15 +26,21 @@ body{
     z-index:1000;
 }
 
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
 .logo img{
-    width:40px;
-    height:40px;
+    width:45px;
+    height:45px;
+    object-fit:contain;
 }
 
 .logo span{
     font-size:24px;
-    font-weight:bold;
-    color:#87CEEB;
+    font-weight:700;
 }
 
 .nav-links{
