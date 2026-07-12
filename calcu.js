@@ -10,7 +10,7 @@
 <body>
 <header>
     <nav class="navbar">
-        <div class="logo">
+        <img src="img/mathub2.png" class="logo" alt="">
             AliMathics
         </div>
         <ul class="nav-links">
